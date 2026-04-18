@@ -1,0 +1,33 @@
+# =============================================================================
+# DragonFruitViT Configuration
+# Edit paths and hyperparameters to match your environment before running.
+# =============================================================================
+
+data:
+  raw_dir:   "data/raw"    # Original dataset directory (one subfolder per class)
+  split_dir: "data/split"  # Output directory after train/val/test split
+
+train:
+  seed:        42
+  batch_size:  32
+  num_workers: 0           # Set to 2+ on Linux/Mac; keep 0 on Windows to avoid multiprocessing issues
+  epochs:      50
+  lr:          0.001
+  weight_decay: 1.0e-4
+  patience:    5           # Early stopping patience (epochs without improvement)
+
+preprocess:
+  train_ratio: 0.8
+  val_ratio:   0.1
+  test_ratio:  0.1
+
+output:
+  results_dir: "results"
+
+# Class names (alphabetical order, must match subfolder names in data/raw/)
+labels:
+  - DomNau
+  - KhoeManh
+  - NamCanh
+  - ThanThu
+  - ThoiBe

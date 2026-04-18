@@ -1,0 +1,36 @@
+# Data — never commit raw or split images
+data/raw/
+data/split/
+
+# Model checkpoints
+results/
+*.pth
+*.pt
+*.ckpt
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+logs/
